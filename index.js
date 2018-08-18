@@ -13,10 +13,11 @@ const rootElemment = document.getElementById("root");
 
 // // --- 3 React JSX syntax to create an element(Use babel as transformer) ---
 const content = "Hello World";
-const myClassName = 'container'
+const myClassName = "container";
 const props = {
   className: myClassName,
   children: content
-}
-const element = <div {...props}/>;
+};
+const Message = props => <div>{props.msg}</div>;
+const element = <Message msg="Hello World" />;
 ReactDOM.render(element, rootElemment);
