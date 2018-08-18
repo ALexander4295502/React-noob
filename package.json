@@ -1,0 +1,11 @@
+{
+  "name": "React-Beginner-guide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ALexander4295502/React-noob.git",
+  "author": "Zheng Yuan <yuanzheng@sportdex.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.14.2"
+  }
+}
