@@ -12,15 +12,19 @@ const rootElemment = document.getElementById("root");
 // });
 
 // // --- 3 React JSX syntax to create an element(Use babel as transformer) ---
-function tick() {
-  const time = new Date().toLocaleTimeString();
-  const element = (
-    <div>
-      It is <input value={time} />
-      It is <input value={time} />
-    </div>
-  );
-  ReactDOM.render(element, rootElemment);
+function Box(props) {
+  return <div {...props} />;
 }
-tick();
-setInterval(tick, 1000);
+const element = (
+  <div>
+    <Box
+      style={{
+        paddingLeft: 20,
+        border: '1px solid #000'
+      }}
+    >
+      Small Box
+    </Box>
+  </div>
+);
+ReactDOM.render(element, rootElemment);
