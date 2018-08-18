@@ -19,5 +19,20 @@ const props = {
   children: content
 };
 const Message = props => <div>{props.msg}</div>;
-const element = <Message msg="Hello World" />;
-ReactDOM.render(element, rootElemment);
+class SayHello extends React.Component {
+  static propTypes = {
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired
+  };
+
+  render() {
+    const { firstName, lastName } = this.props;
+    return (
+      <div>
+        Hello {firstName} {lastName}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<SayHello firstName={true} />, rootElemment);
