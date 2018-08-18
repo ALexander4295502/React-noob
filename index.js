@@ -12,27 +12,8 @@ const rootElemment = document.getElementById("root");
 // });
 
 // // --- 3 React JSX syntax to create an element(Use babel as transformer) ---
-const content = "Hello World";
-const myClassName = "container";
-const props = {
-  className: myClassName,
-  children: content
-};
-const Message = props => <div>{props.msg}</div>;
-class SayHello extends React.Component {
-  static propTypes = {
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired
-  };
-
-  render() {
-    const { firstName, lastName } = this.props;
-    return (
-      <div>
-        Hello {firstName} {lastName}
-      </div>
-    );
-  }
+function Message({ message }) {
+  return <div>{message ? message : "No Message"}</div>;
 }
 
-ReactDOM.render(<SayHello firstName={true} />, rootElemment);
+ReactDOM.render(<Message message={null} />, rootElemment);
